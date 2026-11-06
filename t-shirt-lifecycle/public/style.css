@@ -1,0 +1,281 @@
+/* Page-level styles (in Colab the notebook provided the page around the project) */
+html, body {
+  margin: 0;
+  background: #f6f2e8;
+}
+
+body { padding: 24px; }
+
+#shirt-project {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  body { padding: 0; }
+}
+
+/* ---- Project styles ---- */
+#shirt-project {
+  background: #f6f2e8;
+  color: #253629;
+  font-family: Georgia, serif;
+  padding: 28px;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+#shirt-project * { box-sizing: border-box; }
+
+#shirt-project header {
+  max-width: 850px;
+  margin-bottom: 25px;
+}
+
+#shirt-project h1 {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+#shirt-project header p,
+#shirt-project .scene p,
+#shirt-project .story p,
+#shirt-project .branch-story p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #566052;
+}
+
+#shirt-project .chapters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+#shirt-project button { cursor: pointer; }
+
+#shirt-project .chapter-button {
+  border: 1px solid #526b4e;
+  background: transparent;
+  color: #354b35;
+  border-radius: 30px;
+  padding: 11px 17px;
+  font-size: 13px;
+}
+
+#shirt-project .chapter-button.active,
+#shirt-project .chapter-button:hover {
+  background: #526b4e;
+  color: white;
+}
+
+#shirt-project .layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 20px;
+}
+
+#shirt-project .scene {
+  background: #e4e5d7;
+  border-radius: 16px;
+  padding: 28px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#shirt-project .illustration {
+  font-size: 82px;
+  margin-bottom: 12px;
+}
+
+#shirt-project .scene h2 {
+  font-size: 27px;
+  margin: 5px 0 10px;
+}
+
+/* The same map is reused in both sections */
+#shirt-project #map {
+  height: 400px;
+  min-height: 400px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e7e5dc;
+}
+
+#shirt-project .story {
+  margin-top: 20px;
+  padding: 23px 28px;
+  border-radius: 16px;
+  background: #eee5d2;
+}
+
+#shirt-project .story h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#shirt-project .next-button {
+  margin-top: 18px;
+  border: none;
+  border-radius: 30px;
+  background: #526b4e;
+  color: white;
+  padding: 13px 21px;
+  font-size: 14px;
+}
+
+#shirt-project .next-button:hover {
+  background: #3e563c;
+}
+
+#shirt-project .branch-layout {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+#shirt-project .shirt-origin {
+  background: #e4e5d7;
+  border-radius: 15px;
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 230px;
+}
+
+#shirt-project .shirt-origin .shirt-icon {
+  font-size: 75px;
+  margin-bottom: 10px;
+}
+
+#shirt-project .shirt-origin h2 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+#shirt-project .branch-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#shirt-project .branch {
+  border: 1px solid #d5d4c7;
+  border-radius: 12px;
+  padding: 15px 17px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: #f1eee4;
+  color: #354b35;
+  font-size: 15px;
+  transition: background .2s, border .2s;
+}
+
+#shirt-project .branch:hover,
+#shirt-project .branch.selected {
+  background: #e0e4d5;
+  border-color: #526b4e;
+}
+
+#shirt-project .branch:focus { outline: none; }
+
+#shirt-project .branch-arrow {
+  font-size: 25px;
+  color: #526b4e;
+  min-width: 28px;
+  text-align: center;
+}
+
+#shirt-project .branch strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+#shirt-project .branch small {
+  font-family: Arial, sans-serif;
+  color: #687064;
+  font-size: 12px;
+}
+
+/* Map gets its own full-width row in the second section */
+#shirt-project .branch-map-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#shirt-project .branch-map-heading {
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+#shirt-project .branch-story {
+  margin-top: 18px;
+  padding: 22px 25px;
+  border-radius: 15px;
+  background: #eee5d2;
+}
+
+#shirt-project .branch-story h2 {
+  margin: 0 0 9px;
+  font-size: 24px;
+}
+
+#shirt-project .destination-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+#shirt-project .destination-button {
+  border: 1px solid #526b4e;
+  border-radius: 22px;
+  background: transparent;
+  color: #354b35;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+
+#shirt-project .destination-button:hover {
+  background: #526b4e;
+  color: white;
+}
+
+#shirt-project .map-caption {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #77796e;
+  margin-top: 9px;
+}
+
+#shirt-project .back-button {
+  border: none;
+  background: transparent;
+  color: #526b4e;
+  padding: 10px 0;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+#shirt-project .hidden { display: none !important; }
+
+@media(max-width:700px) {
+  #shirt-project { padding: 16px; }
+  #shirt-project h1 { font-size: 32px; }
+  #shirt-project .layout,
+  #shirt-project .branch-layout {
+    grid-template-columns: 1fr;
+  }
+  #shirt-project #map { height: 340px; min-height: 340px; }
+  #shirt-project .scene { min-height: 260px; }
+}
